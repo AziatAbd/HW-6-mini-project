@@ -1,0 +1,22 @@
+.todo-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.todo-form_container {
+  width: 50rem;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.todo-form_input {
+  display: flex;
+  margin: 5px 0 10px 0;
+}
+
+label{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
