@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 } from "uuid";
 import { Button, TextField } from "@mui/material";
-import "./TodoForm.css";
+import classes from "./TodoForm.module.css";
 
 const TodoForm = ({ onAddUsers }) => {
   const [name, setName] = useState("");
@@ -29,10 +29,10 @@ const TodoForm = ({ onAddUsers }) => {
 
 
   return (
-    <form className="todo-form">
-      <div className="todo-form_container">
+    <form className={classes.todoForm}>
+      <div className={classes.todoForm_container}>
         <label>Username</label>
-        <div className="todo-form_input">
+        <div className={classes.todoForm_input}>
           <TextField
             fullWidth
             variant="outlined"
@@ -43,7 +43,7 @@ const TodoForm = ({ onAddUsers }) => {
           />
         </div>
         <label>Age (years)</label>
-        <div className="todo-form_input">
+        <div className={classes.todoForm_input}>
           <TextField
             fullWidth
             variant="outlined"

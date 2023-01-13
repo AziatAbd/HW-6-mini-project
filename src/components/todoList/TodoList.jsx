@@ -1,11 +1,11 @@
-import "./TodoList.css";
+import classes from "./TodoList.module.css";
 
 const TodoList = ({ user }) => {
   return (
-    <div className="todo-list">
-      <ul className="todo-list_container">
+    <div className={classes.todoList}>
+      <ul className={classes.todoList_container}>
         {user.map((item) => (
-          <li className="todo-list_item" key={item.id}>
+          <li className={classes.todoList_item} key={item.id}>
             <span>{item.name} </span>
             <span> ({item.age} years old)</span>
           </li>

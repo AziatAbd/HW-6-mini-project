@@ -1,10 +1,10 @@
-.todo-list{
+.todoList{
     display: flex;
     justify-content: center;
     
 }
 
-.todo-list_container {
+.todoList_container {
   /* display: flex; */
   justify-content: center;
   background-color: #fff;
@@ -14,7 +14,7 @@
   border-radius: 10px;
 }
 
-.todo-list_item {
+.todoList_item {
   border: 1px solid;
   padding: 5px;
   margin: 0 0 10px 0;
