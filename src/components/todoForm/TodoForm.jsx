@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { v4 } from "uuid";
-import Button from "../UI/button/Button";
-import Input from "../UI/input/Input";
+import { Button, TextField } from "@mui/material";
 import "./TodoForm.css";
 
-const TodoForm = ({ onAddUsers, onSort }) => {
+const TodoForm = ({ onAddUsers }) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
 
@@ -28,31 +27,40 @@ const TodoForm = ({ onAddUsers, onSort }) => {
     setAge("");
   };
 
+
   return (
     <form className="todo-form">
       <div className="todo-form_container">
         <label>Username</label>
         <div className="todo-form_input">
-          <Input
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Name"
             onChange={nameChangeHandler}
             value={name}
             type="text"
-            placeholder="Name"
           />
         </div>
         <label>Age (years)</label>
         <div className="todo-form_input">
-          <Input
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Age"
             onChange={ageChangeHandler}
             value={age}
             type="number"
-            placeholder="Age"
           />
         </div>
-        <Button onClick={addNewUser} disabled={!name || !age}>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={addNewUser}
+          disabled={!name || !age}
+        >
           Add User
         </Button>
-        <Button onClick={onSort} style={{marginLeft: "10px"}}>Sort</Button>
       </div>
     </form>
   );
